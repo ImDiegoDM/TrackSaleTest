@@ -1,0 +1,33 @@
+$padding-price:10px;
+
+.stocks{
+  display: flex;
+}
+
+.stockContainer,.stockContainer:hover{
+  color: inherit;
+  padding: 0 10px;
+  text-decoration: none;
+}
+
+
+.stock{
+  height: 130px;
+  border-radius: $border-radius;
+  box-shadow: 3px 4px 15px 4px #b8b8b8;
+  margin: 10px 0;
+  position: relative;
+}
+
+.stock .size,.stock .price{
+  position: absolute;
+  bottom: 0;
+}
+
+.stock .size{
+  left: $padding-price;
+}
+
+.stock .price{
+  right: $padding-price;
+}
