@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "build": "webpack"
+    "build": "grunt build",
+    "start": "grunt build && grunt watch"
   },
   "repository": {
     "type": "git",
@@ -18,9 +19,18 @@
   },
   "homepage": "https://github.com/ImDiegoDM/TrackSaleTest#readme",
   "devDependencies": {
+    "@types/jest": "^23.3.2",
+    "@types/react": "^16.4.14",
+    "@types/react-dom": "^16.0.8",
+    "@types/react-redux": "^6.0.9",
+    "@types/react-router-dom": "^4.3.1",
+    "@types/redux": "^3.6.31",
+    "@types/redux-logger": "^3.0.6",
+    "@types/redux-promise-middleware": "0.0.11",
     "grunt": "^1.0.3",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.1.0",
     "grunt-webpack": "^3.1.3",
     "jest": "^23.6.0",
     "ts-jest": "^23.10.2",
@@ -30,14 +40,14 @@
     "webpack-cli": "^3.1.1"
   },
   "dependencies": {
-    "@types/jest": "^23.3.2",
-    "@types/react": "^16.4.14",
-    "@types/react-dom": "^16.0.8",
-    "@types/react-redux": "^6.0.9",
-    "@types/redux": "^3.6.31",
+    "axios": "^0.18.0",
+    "bootstrap": "^4.1.3",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-redux": "^5.0.7",
-    "redux": "^4.0.0"
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.0",
+    "redux-logger": "^3.0.6",
+    "redux-promise-middleware": "^5.1.1"
   }
 }
