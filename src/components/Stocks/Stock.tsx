@@ -1,5 +1,5 @@
 import * as React from "React";
-import { IStock } from "../Interfaces/IStock";
+import { IStock } from "../../Interfaces/IStock";
 import { Link } from "react-router-dom";
 
 export class Stock extends React.Component<IStock>{

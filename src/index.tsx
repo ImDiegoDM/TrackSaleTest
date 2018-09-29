@@ -3,7 +3,7 @@ import * as ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import { BrowserRouter as Router,Route } from "react-router-dom";
 
-import { Stocks } from "./components/Stocks";
+import { Stocks } from "./components/Stocks/Stocks";
 
 import store from "./store";
 
