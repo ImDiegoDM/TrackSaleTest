@@ -1,6 +1,6 @@
 RewriteEngine On
 
-RewriteCond %{THE_REQUEST} /www/([^\s?]*) [NC]
+RewriteCond %{THE_REQUEST} /dist/([^\s?]*) [NC]
 RewriteRule ^ %1 [L,NE,R=302]
 
-RewriteRule ^((?!www/).*)$ www/$1 [L,NC]
+RewriteRule ^((?!dist/).*)$ dist/$1 [L,NC]

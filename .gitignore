@@ -74,3 +74,9 @@ typings/
 
 # build direcotorie
 www/
+
+#sass cache
+.sass-cache/
+
+#compiled folder
+dist/
