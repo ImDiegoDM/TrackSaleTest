@@ -1,4 +1,5 @@
 import * as React from "React";
+import { CloseGraph } from "../Graph/CloseGraph";
 
 export class StockInfo extends React.Component<any>{
 
@@ -16,10 +17,10 @@ export class StockInfo extends React.Component<any>{
     });
 
     return(
-    <div className="container stock">
+    <div className="container stock" id="stock">
       <h3>{quote.companyName}<span className="symbol">({quote.symbol})</span></h3>
       <h2>{quote.close} <span className={quoteClass}>{quote.change}({Math.round((quote.changePercent*100)*100)/100}%)</span></h2>
-      <div className="chart"></div>
+      <CloseGraph chartData={this.props.stock.chart} width={600}></CloseGraph>
       <div className="profile my-4">
         <h3>Profile</h3>
         <div>{company.description}</div>

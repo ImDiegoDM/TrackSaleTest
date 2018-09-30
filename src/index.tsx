@@ -19,7 +19,7 @@ ReactDOM.render(
         <div>
           <Search></Search>
           <Route exact={true} path="/" component={Stocks}/>
-          <Route exact={true} path="/stocks/:stockId" render={(route)=>{
+          <Route path="/stocks/:stockId" render={(route)=>{
             return <Stock stockId={route.match.params.stockId}></Stock>
           }}/>
         </div>

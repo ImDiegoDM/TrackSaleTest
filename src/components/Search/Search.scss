@@ -1,6 +1,21 @@
 .search{
   padding-top: 10px;
   background-color: #87acff;
+  position: relative;
+  .home{
+    a{
+      &:hover{
+        text-decoration: none;
+      }
+      color: white;
+      position: absolute;
+      top:42%;
+      transform: translateY(-50%);
+      left: 5px;
+      font-size: 25px;
+      line-height: 25px;
+    }
+  }
   .container{
     display: flex;
     align-items: center;

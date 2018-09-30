@@ -65,7 +65,7 @@ module.exports = function(grunt) {
     done();
   });
 
-  grunt.registerTask('moveReactFiles','move react builds to dist folder',async function(){
+  grunt.registerTask('moveLibFiles','move react builds to dist folder',async function(){
     var done = this.async();
 
     fs.mkdirSync('dist/lib');
@@ -77,6 +77,11 @@ module.exports = function(grunt) {
     fs.
     createReadStream('./node_modules/react/umd/react.development.js')
     .pipe(fs.createWriteStream('dist/lib/react.min.js'));
+
+    fs.
+    createReadStream('./node_modules/d3/dist/d3.min.js')
+    .pipe(fs.createWriteStream('dist/lib/d3.min.js'));
+
     done();
   });
 
@@ -109,7 +114,7 @@ module.exports = function(grunt) {
   grunt.registerTask('build','build the aplications',[
     'clearDistFolder',
     'distHtaccess',
-    'moveReactFiles',
+    'moveLibFiles',
     'moveBootstrapFiles',
     'moveIndex',
     'concat',

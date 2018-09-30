@@ -1,4 +1,5 @@
 import * as React from "React";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export class SearchBar extends React.Component<any,any>{
@@ -6,6 +7,11 @@ export class SearchBar extends React.Component<any,any>{
   render():any{
     return (
       <div className="search">
+      <div className="home">
+        <Link to="/">
+          Home
+        </Link>
+      </div>
       <div className="container">
         <div className="icon">
           <FontAwesomeIcon icon="search"/>

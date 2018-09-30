@@ -5,7 +5,7 @@ export class StockCard extends React.Component<any>{
 
   render():any{
     return (
-      <div className="stockContainer col-4">
+      <div className="stockContainer col-4 col-lg-3">
         <Link to={'/stocks/'+this.props.stock.symbol}>
           <div className="stock-card px-3 py-1">
             <h2 className="symbol">{this.props.stock.symbol}</h2>
