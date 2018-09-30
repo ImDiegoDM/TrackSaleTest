@@ -9,5 +9,3 @@ RUN ln -s /usr/bin/nodejs /usr/sbin/node
 
 RUN node -v
 RUN npm -v
-
-EXPOSE 80

@@ -1,0 +1,22 @@
+.stock{
+  margin-top: 50px;
+  h3{
+    .symbol{
+      font-size: 20px;
+      margin-left: 5px;
+      font-weight: normal;
+    }
+  }
+  h2{
+    .change{
+      font-size: 20px;
+      font-weight: normal;
+    }
+    .red{
+      color:red;
+    }
+    .green{
+      color: green;
+    }
+  }
+}

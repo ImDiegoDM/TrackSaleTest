@@ -10,7 +10,7 @@ $padding-price:10px;
   text-decoration: none;
 }
 
-.stock{
+.stock-card{
   &:hover{
     transform: scale(1.2);
   }
@@ -22,15 +22,15 @@ $padding-price:10px;
   position: relative;
 }
 
-.stock .size,.stock .price{
+.stock-card .size,.stock .price{
   position: absolute;
   bottom: 0;
 }
 
-.stock .size{
+.stock-card .size{
   left: $padding-price;
 }
 
-.stock .price{
+.stock-card .price{
   right: $padding-price;
 }

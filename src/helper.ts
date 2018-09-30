@@ -1,3 +1,6 @@
+/**
+ * Class for handle multiple tries to execute some code
+ */
 export class Debounce{
   timeWindow:number = 500;
   timeout:any;

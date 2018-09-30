@@ -1,8 +1,6 @@
 export interface IStock{
-  stock:{
-    price:number,
-    size:number,
-    symbol: string,
-    time: number
-  }
+  fetching:boolean,
+  fetched:boolean,
+  error:boolean,
+  data:any
 }

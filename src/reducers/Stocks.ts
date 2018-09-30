@@ -1,6 +1,4 @@
 import { IServerData } from '../Interfaces/IServerData';
-import { IAction } from "../Interfaces/IAction";
-import { ReducersMapObject,Reducer } from "redux";
 
 const defaultValue:IServerData={
   fetching:false,
@@ -11,15 +9,19 @@ const defaultValue:IServerData={
 
 export default <IAction>(state:IServerData=defaultValue,action:any):IServerData=>{
  switch(action.type){
+
   case "FETCH_STOCKS_PENDING":{
     return {...state,fetching:true}
   }
+
   case"FETCH_STOCKS_FULFILLED":{
     return {...state,fetching:false,data:action.payload.data.filter(()=>{return true})}
   }
+
   case"FETCH_STOCKS_REJECTED":{
     return {...state,fetching:false,error:action.payload.message}
   }
+
  }
   return state;
 }

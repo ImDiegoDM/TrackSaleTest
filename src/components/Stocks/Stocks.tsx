@@ -1,7 +1,7 @@
 import * as React from "React";
 import { connect,DispatchProp,ConnectedComponentClass } from "react-redux";
 import { fetchStocks } from "../../actions/StocksActions";
-import { Stock } from "./Stock";
+import { StockCard } from "./StockCard";
 
 @connect((store:any)=>{
   return {
@@ -17,7 +17,7 @@ export class Stocks extends React.Component<any>{
     if(this.props.stocks.data.length>0){
       let stocks = [];
       for (let i = 0; i < 20; i++) {
-        stocks.push(<Stock stock={this.props.stocks.data[i]}></Stock>);
+        stocks.push(<StockCard stock={this.props.stocks.data[i]}></StockCard>);
       }
 
       return <div className="container">

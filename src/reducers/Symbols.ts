@@ -13,9 +13,11 @@ const defaultValue:ISymbols={
 
 export default <IAction>(state:ISymbols=defaultValue,action:any):ISymbols=>{
  switch(action.type){
+
   case "FETCH_SYMBOLS_PENDING":{
     return {...state,fetching:true}
   }
+
   case"FETCH_SYMBOLS_FULFILLED":{
     return {
       ...state,
@@ -25,12 +27,15 @@ export default <IAction>(state:ISymbols=defaultValue,action:any):ISymbols=>{
       })
     }
   }
+
   case"FETCH_SYMBOLS_REJECTED":{
     return {...state,fetching:false,error:action.payload.message}
   }
+
   case"TYPING_SEARCH_VALUE":{
     return {...state,searchValue:action.payload}
   }
+
   case"SEARCH":{
     if(state.searchValue!=''){
 
@@ -49,9 +54,11 @@ export default <IAction>(state:ISymbols=defaultValue,action:any):ISymbols=>{
       return {...state,searchResult:[]}
     }
   }
+
   case"CANCEL_SEARCH":{
     return {...state,searchResult:[],searchValue:''}
   }
+  
  }
   return state;
 }
