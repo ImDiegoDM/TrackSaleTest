@@ -55,7 +55,11 @@ module.exports = function(grunt) {
 
   grunt.registerTask('clearDistFolder','celar dist folder',async function(){
     var done = this.async();
-    rimraf.sync('dist/*');
+    if (fs.existsSync('dist')) {
+      rimraf.sync('dist/*');
+    }else{
+      fs.mkdirSync('dist');
+    }
     done();
   });
 
