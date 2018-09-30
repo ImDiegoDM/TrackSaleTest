@@ -4,14 +4,17 @@ $padding-price:10px;
   display: flex;
 }
 
-.stockContainer,.stockContainer:hover{
+.stockContainer a,.stockContainer a:hover{
   color: inherit;
   padding: 0 10px;
   text-decoration: none;
 }
 
-
 .stock{
+  &:hover{
+    transform: scale(1.2);
+  }
+  transition: all .5s;
   height: 130px;
   border-radius: $border-radius;
   box-shadow: 3px 4px 15px 4px #b8b8b8;

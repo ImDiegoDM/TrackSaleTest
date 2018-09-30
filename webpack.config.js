@@ -22,5 +22,11 @@ module.exports = {
   externals: {
     "react": "React",
     "react-dom": "ReactDOM"
+  },
+  optimization: {
+    removeAvailableModules: false,
+    removeEmptyChunks: false,
+    splitChunks: false,
+    minimize: false
   }
 };

@@ -91,8 +91,24 @@ module.exports = function(grunt) {
     done();
   });
 
+  grunt.registerTask('distHtaccess','Create .htaccess in dist folder to react router work properly',function(){
+    var done = this.async();
+
+    let htaccessContent = "RewriteBase / \n"+
+    "RewriteRule ^index\.html$ - [L] \n"+
+    "RewriteCond %{REQUEST_FILENAME} !-f \n"+
+    "RewriteCond %{REQUEST_FILENAME} !-d \n"+
+    "RewriteRule . /index.html [L] \n";
+
+    fs.appendFile('dist/.htaccess',htaccessContent, function (err) {
+      if (err) throw err;
+      done();
+    });
+  });
+
   grunt.registerTask('build','build the aplications',[
     'clearDistFolder',
+    'distHtaccess',
     'moveReactFiles',
     'moveBootstrapFiles',
     'moveIndex',

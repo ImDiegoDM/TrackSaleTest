@@ -1,15 +1,15 @@
-import { IStocks } from '../Interfaces/IStocks';
+import { IServerData } from '../Interfaces/IServerData';
 import { IAction } from "../Interfaces/IAction";
 import { ReducersMapObject,Reducer } from "redux";
 
-const defaultValue:IStocks={
+const defaultValue:IServerData={
   fetching:false,
   fetched:false,
   error:undefined,
   data:[]
 };
 
-export default <IAction>(state:IStocks=defaultValue,action:any):IStocks=>{
+export default <IAction>(state:IServerData=defaultValue,action:any):IServerData=>{
  switch(action.type){
   case "FETCH_STOCKS_PENDING":{
     return {...state,fetching:true}

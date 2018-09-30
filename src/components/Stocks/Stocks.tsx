@@ -1,6 +1,5 @@
 import * as React from "React";
 import { connect,DispatchProp,ConnectedComponentClass } from "react-redux";
-import { IStocks } from "../../Interfaces/IStocks";
 import { fetchStocks } from "../../actions/StocksActions";
 import { Stock } from "./Stock";
 
