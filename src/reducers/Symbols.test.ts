@@ -79,4 +79,112 @@ describe('Symbols Reducers unit test',()=>{
       }
     ])
   });
+
+  it('should return a maximum 10 values on search event',()=>{
+
+    const defaultValue:ISymbols={
+      fetching:false,
+      fetched:false,
+      error:undefined,
+      data:[
+        {
+          symbol:"AADR",
+          name:"AdvisorShares Dorsey Wright ADR"
+        },
+        {
+          symbol:"AAL",
+          name:"American Airlines Group Inc."
+        },
+        {
+          symbol:"AADR",
+          name:"AdvisorShares Dorsey Wright ADR"
+        },
+        {
+          symbol:"AAL",
+          name:"American Airlines Group Inc."
+        },
+        {
+          symbol:"AADR",
+          name:"AdvisorShares Dorsey Wright ADR"
+        },
+        {
+          symbol:"AAL",
+          name:"American Airlines Group Inc."
+        },
+        {
+          symbol:"AADR",
+          name:"AdvisorShares Dorsey Wright ADR"
+        },
+        {
+          symbol:"AAL",
+          name:"American Airlines Group Inc."
+        },
+        {
+          symbol:"AADR",
+          name:"AdvisorShares Dorsey Wright ADR"
+        },
+        {
+          symbol:"AAL",
+          name:"American Airlines Group Inc."
+        },
+        {
+          symbol:"AADR",
+          name:"AdvisorShares Dorsey Wright ADR"
+        },
+        {
+          symbol:"AAL",
+          name:"American Airlines Group Inc."
+        },
+        {
+          symbol:"AADR",
+          name:"AdvisorShares Dorsey Wright ADR"
+        },
+        {
+          symbol:"AAL",
+          name:"American Airlines Group Inc."
+        },
+        {
+          symbol:"AADR",
+          name:"AdvisorShares Dorsey Wright ADR"
+        },
+        {
+          symbol:"AAL",
+          name:"American Airlines Group Inc."
+        }
+      ],
+      searchResult:[],
+      searchValue:'A'
+    };
+
+    let response = Symbols(defaultValue,{
+      type:"SEARCH"
+    });
+
+    expect(response.searchResult.length).toEqual(10)
+  });
+
+  it('should clear search value on clear search event',()=>{
+
+    const defaultValue:ISymbols={
+      fetching:false,
+      fetched:false,
+      error:undefined,
+      data:[{
+        symbol:"AADR",
+        name:"AdvisorShares Dorsey Wright ADR"
+      },
+      {
+        symbol:"AAL",
+        name:"American Airlines Group Inc."
+      }],
+      searchResult:[],
+      searchValue:'Advi'
+    };
+
+    let response = Symbols(defaultValue,{
+      type:"CANCEL_SEARCH"
+    });
+
+    expect(response.searchValue).toEqual('');
+  })
 })
